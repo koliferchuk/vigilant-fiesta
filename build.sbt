@@ -1,5 +1,5 @@
 lazy val ScalaVersion      = "2.13.8"
-lazy val Http4sVersion     = "0.23.15"
+lazy val Http4sVersion     = "0.23.12"
 lazy val CirceVersion      = "0.14.1"
 lazy val ScalaTestVersion  = "3.2.13"
 lazy val ScalaCheckVersion = "1.14.1"
@@ -16,14 +16,13 @@ lazy val root = (project in file("."))
       "-feature",
       "-language:existentials",
       "-language:higherKinds",
-      "-Ypartial-unification",
       "-Ywarn-unused:implicits",
       "-Ywarn-unused:imports",
       "-Ywarn-unused:locals",
       "-Ywarn-unused:params",
       "-Ywarn-value-discard"
     ),
-    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6"),
+    addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full),
     libraryDependencies ++= Seq(
 
       "org.http4s"        %% "http4s-blaze-server" % Http4sVersion,
