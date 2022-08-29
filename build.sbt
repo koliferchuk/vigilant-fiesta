@@ -1,15 +1,14 @@
-lazy val Http4sVersion     = "0.18.21"
-lazy val CirceVersion      = "0.10.1"
-lazy val LogbackVersion    = "1.2.3"
-lazy val ScalaTestVersion  = "3.0.3"
-lazy val ScalaCheckVersion = "1.13.4"
-lazy val Log4CatsVersion   = "0.1.1"
+lazy val ScalaVersion      = "2.13.8"
+lazy val Http4sVersion     = "0.23.15"
+lazy val CirceVersion      = "0.14.1"
+lazy val ScalaTestVersion  = "3.2.13"
+lazy val ScalaCheckVersion = "1.14.1"
 
 lazy val root = (project in file("."))
   .settings(
     name := "vigilant-fiesta",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.12.4",
+    scalaVersion := ScalaVersion,
     scalacOptions := Seq(
       "-deprecation",
       "-encoding",
@@ -34,8 +33,8 @@ lazy val root = (project in file("."))
       "io.circe"          %% "circe-generic"       % CirceVersion,
       "io.circe"          %% "circe-parser"        % CirceVersion,
 
-      "ch.qos.logback"    %  "logback-classic"     % LogbackVersion,
-      "io.chrisdavenport" %% "log4cats-slf4j"      % Log4CatsVersion,
+      // "ch.qos.logback"    %  "logback-classic"     % LogbackVersion,
+      // "io.chrisdavenport" %% "log4cats-slf4j"      % Log4CatsVersion,
 
       "org.scalatest"     %% "scalatest"           % ScalaTestVersion  % Test,
       "org.scalacheck"    %% "scalacheck"          % ScalaCheckVersion % Test
