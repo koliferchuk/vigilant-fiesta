@@ -1,2 +1,8 @@
 project/project
+project/.bloop
 target
+.vscode/
+.metals/
+.bsp/
+.DS_Store
+metals.sbt
