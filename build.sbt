@@ -36,7 +36,8 @@ lazy val root = (project in file("."))
       // "io.chrisdavenport" %% "log4cats-slf4j"      % Log4CatsVersion,
 
       "org.scalatest"     %% "scalatest"           % ScalaTestVersion  % Test,
-      "org.scalacheck"    %% "scalacheck"          % ScalaCheckVersion % Test
+      "org.scalacheck"    %% "scalacheck"          % ScalaCheckVersion % Test,
+      "org.scalatestplus" %% "scalacheck-1-16"     % "3.2.13.0" % Test
     )
   )
 
