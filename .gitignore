@@ -7,3 +7,8 @@ target
 .bloop/
 .DS_Store
 metals.sbt
+.yarn/**
+.yarn/releases/*
+.yarn/plugins/**/*
+.pnp.*
+node_modules
